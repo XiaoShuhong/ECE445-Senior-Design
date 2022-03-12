@@ -1,0 +1,9 @@
+Y. Li, L. Cao, J. Zhu and J. Luo, "Mining Fashion Outfit Composition Using an End-to-End Deep Learning Approach on Set Data", IEEE Transactions on Multimedia, vol. 19, no. 8, pp. 1946-1955, 2017.
+
+Ziwei Liu, Ping Luo, Shi Qiu, Ziaogang Wang and Xiaoou Tang, "DeepFashion: Powering Robust Clothes Recognition and Retrieval with Rich Annotations", IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pp. 1096-1104, 2016.
+
+C. Stan and I. Mocanu, "An Intelligent Personalized Fashion Recommendation System," 2019 22nd International Conference on Control Systems and Computer Science (CSCS), 2019, pp. 210-215, doi: 10.1109/CSCS.2019.00042.
+
+Z. Liu, P. Luo, S. Qiu, X. Wang and X. Tang, "DeepFashion: Powering Robust Clothes Recognition and Retrieval with Rich Annotations," 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016, pp. 1096-1104, doi: 10.1109/CVPR.2016.124.
+
+Xin Liu, Jiancheng Li, Jiaqi Wang, Ziwei Liu, "MMFashion: An Open-Source Toolbox for Visual Fashion Analysis," 2020 CVPR.
