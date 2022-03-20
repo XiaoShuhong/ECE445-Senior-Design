@@ -1,0 +1,56 @@
+标签定义
+
+类别：
+上装：
+anorak：防水（风）夹克
+blazer：运动西装夹克
+blouse：女士衬衫（宽松）
+bomber: 飞行夹克
+button-down：有一排扣子的衬衫
+cardigan：开襟（长袖）毛衣
+Flannel：法兰绒（厚衬衫）
+halter：吊带（露背）衫
+henley：无领衬衫
+hoodie：连帽衫
+jacket：夹克衫
+jersey：运动衫
+parka：防风大衣
+peacoat：（双排扣）呢大衣
+poncho：披肩
+sweater：针织毛衣
+tank：（女士）无袖低龄（吊带？）上衣
+tee：短袖圆领汗衫
+top：女士上衣
+turtleneck：高领（翻领）毛衣
+下装：
+capris：紧身（七分）裤
+chinos：卡其裤
+culottes：裙裤
+cutoffs：热裤
+gauchos：牛仔裤？ 可以丢掉，很少，不知道怎么概括
+jeans：牛仔裤
+jeggings：（女士）紧身弹力裤
+jodhpurs：骑马库，腿内侧有加厚补丁
+joggers：收脚慢跑裤
+leggings: （女士）紧身弹力裤
+sarong：薄纱罩  也很少可以丢掉，不像平时会穿的
+shorts：短裤（膝盖）
+skirt：裙子
+sweatshorts：运动短裤
+trunks：沙滩裤
+全身：
+caftan：宽松长袍 不多，可以丢掉
+cape：斗篷  已经被merge到dress里了，数据集里也找不到cape文件夹
+coat：风衣
+coverup：（泳衣、内衣）罩衫 很少 可丢
+dress：连衣裙
+jumpsuit：连身裤装
+kaftan：腰带长袍（裙） 可以不要 不多
+kimono：日式服装 多 但是很抽象，不只是和服
+nightdress：睡裙 感觉有些是可以传出去的样子有些不能，差别比较大，不多，类别上被处理到了dress里，感觉可以直接丢掉
+onesie：连体（睡衣） 可以丢掉
+robe：睡袍，浴袍 可以丢掉
+romper：连体裤，感觉跟jumpsuit差不多，就是这个下身感觉都比较短
+shirtdress：衬衫式连衣裙 已经被merge到了dress
+sundress：无袖宽松连衣裙， 已经被merge到了dress
+
