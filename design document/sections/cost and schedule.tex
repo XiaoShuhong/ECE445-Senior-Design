@@ -1,0 +1,75 @@
+\subsection{Cost Analysis}
+Graduated from UIUC, the average salary of an CompE student is \$99,145/year\cite{salary} and for ME student, the average salary is \$79,117/year\cite{salary-me}. With average person works 2080 hours/year. For our team, equipped with two CompE students and one ME students, we will have a salary of $\$99,145/2080\times2+\$79,117/2080=\$133.37/hour$ in total. Except the very early weeks for brainstorming, we assume 10 weeks of working time, with 10 hours working time for each person each week, we have a total labor cost: $$3\times\$133.37/hours\times10 weeks\times10 hours/week=\$40,010$$
+Our parts costs are listed below, \$4.08 for each.  
+
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{\textwidth}{|X|p{2cm}|}
+    \hline
+    Part & Cost \\
+    \hline
+    ESP8266 Wi-Fi microchip & \$1.83 \\
+    \hline
+    5mm LED & \$0.05 \\
+    \hline
+    DS-211/213 button & \$0.16 \\
+    \hline
+    2.8AH Li-ion battery$\times 2$
+    (AA Portable Power; Nanfu) & \$0.47 \\
+    \hline
+    raw coat hanger & \$1.57 \\
+    \hline
+    Total & \$4.08 \\
+    \hline
+    \end{tabularx}
+\end{table}  
+
+
+We plan to produce 3 coat hanger for demo, so the final total cost is $$\$40,010+3\times\$4.08=\$400,22.24$$  
+\clearpage
+\subsection{Schedule}
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{\textwidth}{|p{1cm}<{\centering}|X|X|X|}
+    \hline
+    week & Bo pan & Chuqin Zhang & Shuhong Xiao \\
+    \hline
+    3/21& 
+    Derive bayesian model used in recommendation subsystem. Produce design document. 
+    & 
+    Read manual and try some demo on ESP8266. Produce design document.  
+    & 
+    Process data set, fix some bugs for training code for extraction subsystem. Produce design document.  \\
+    \hline
+    3/28&
+    Analysis attributes in data set, reduce the quantity. 
+    &Django, HTML, CSS learning.  & label new attributes special for our system.  \\
+    \hline
+    4/4&
+    Train extraction model on GPU.
+    &Set up database and tables.  &Train extraction model on GPU.  \\
+    \hline
+    4/11&
+    Write code for bayesian network. 
+    &Establish hardware communication.  &Test and tune recommendation result.\\
+    \hline
+    4/18&
+    Begin with web design.
+    &Produce and assemble coat hangers.  &Begin with web design  \\
+    \hline
+    4/25&
+    Continue with web design.
+    &Write management code in server for coat hanger, demo it.  &Continue with web design.  \\
+    \hline
+    5/2&Finish web design.  &Coat hanger test.  & Test the individual function of each subsystem.\\
+    \hline
+    5/9&Combine all the subsystem, debug.  &Prepare for demo and presentation.&Prepare for demo and presentation.\\
+    \hline
+    5/16&
+    Conduct environmental testing. 
+    &Begin writing final report.  & Begin writing final report. \\
+    \hline
+    5/23&Finish writing final report.  &Finish writing final report.  & Finish writing final report. \\
+    \hline
+    \end{tabularx}
+\end{table}
