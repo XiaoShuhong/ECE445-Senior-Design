@@ -1,0 +1,117 @@
+ .u-section-1 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url("../images/_20220406165931.jpg");
+  min-height: 800px;
+  background-position: 50% 50%;
+}
+
+.u-section-1 .u-text-1 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin: 238px auto 0;
+}
+
+.u-section-1 .u-text-2 {
+  margin: 41px auto 0;
+}
+
+.u-section-1 .u-btn-1 {
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  margin: 52px auto 0 187px;
+  padding: 19px 59px 19px 58px;
+}
+
+.u-section-1 .u-btn-2 {
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  margin: -60px auto 0;
+  padding: 19px 30px;
+}
+
+.u-section-1 .u-btn-3 {
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  margin: -60px calc(((100% - 1140px) / 2) + 137px) 3px auto;
+  padding: 19px 63px;
+}
+
+@media (max-width: 1199px) {
+   .u-section-1 {
+    min-height: 660px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-left: 94px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-left: 488px;
+  }
+
+  .u-section-1 .u-btn-3 {
+    margin-right: calc(((100% - 940px) / 2));
+    margin-left: 695px;
+  }
+}
+
+@media (max-width: 991px) {
+   .u-section-1 {
+    min-height: 506px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-left: 378px;
+  }
+
+  .u-section-1 .u-btn-3 {
+    margin-right: calc(((100% - 720px) / 2));
+    margin-left: 475px;
+  }
+}
+
+@media (max-width: 767px) {
+   .u-section-1 {
+    min-height: 380px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-left: 288px;
+  }
+
+  .u-section-1 .u-btn-3 {
+    margin-right: calc(((100% - 540px) / 2));
+    margin-left: 295px;
+  }
+}
+
+@media (max-width: 575px) {
+   .u-section-1 {
+    min-height: 239px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 3.75rem;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-left: 47px;
+  }
+
+  .u-section-1 .u-btn-2 {
+    margin-left: 141px;
+  }
+
+  .u-section-1 .u-btn-3 {
+    margin-right: calc(((100% - 340px) / 2));
+    margin-left: 48px;
+  }
+}

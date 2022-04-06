@@ -3,5 +3,16 @@ from django.http import HttpResponse
 # Create your views here.
 def index(request):
     # return HttpResponse("hello world")
-    return render(request,"index.html")
+    return render(request,"Home.html")
+
+def back_home(request):
+    
+    return render(request,"Home.html")
+
+
+
+
+
+    
+    
     
