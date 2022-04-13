@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block main_body %}
+<head>
+  {% load static %}
+  <style>
+		mylabel{
+			display:inline-block;
+			width:115px;
+			height:40px;
+			line-height:40px;
+			text-align: center;
+			background:#BE1A21;
+			font-size:18px;
+			color:#fff;
+			cursor:pointer;
+      margin-top: 10%;
+		}
+		input[id=file]{
+			margin-left:-2000px;
+			height:0;
+		}
+	</style>
+  <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/upload.css' %}" media="screen">
+  
+</head>
+<section class="u-clearfix u-image u-shading u-section-1" src="" data-image-width="1051" data-image-height="701" id="sec-42d8">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <div class="u-clearfix u-gutter-68 u-layout-wrap u-layout-wrap-1">
+      <div class="u-layout">
+        <div class="u-layout-row">
+          <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+            <div class="u-container-layout u-container-layout-1">
+              <h1 class="u-heading-font u-text u-title u-text-1">Register Your New Clothes</h1>
+              <p class="u-large-text u-text u-text-font u-text-variant u-text-2"> "Don't be into trends. Don't make fashion own you, but you decide what you are, what you want to express by the way you dress and the way to live."</p>
+            </div>
+          </div>
+          <div class="u-container-style u-layout-cell u-opacity u-opacity-45 u-right-cell u-shape-rectangle u-size-30 u-layout-cell-2">
+            <div class="u-container-layout u-container-layout-2">
+              <div class="u-expanded-width u-form u-form-1">
+                <form class="form-horizontal" action="{% url 'upload_clothes' %}" method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label">File Name：</label>
+      
+                      <div class="col-sm-4">
+                        <input type="text" name="filename" class="form-control u-input u-input-rectangle u-border-1 u-border-grey-30" id="inputEmail3" placeholder="Name">
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!-- /.box-body -->
+                	<div>
+                    <mylabel><label for="file" id="upFile">upload file</label></mylabel>
+                    <input type="file" name="file_content" id="file" />
+                  </div>
+                  <div>
+                    <p id="fileName"></p>
+                    <!-- <myimg><img src="" id="fileImg" ></myimg> -->
+                  </div>
+                 
+                  <div class="u-align-left u-form-group u-form-submit">
+                    <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
+                    <input type="submit" value="submit" class="u-form-control-hidden">
+                  </div>
+                </div>
+                
+                  <!-- /.box-footer -->
+                </form>
+               
+                <!-- <form action="{% url 'upload_clothes' %}" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" enctype="multipart/form-data" style="padding: 10px;">
+                  {% csrf_token %}
+                  <div class="u-form-group u-form-name">
+                    <label for="name-f9e6" class="u-label">File Name</label>
+                    <input type="text" placeholder="Name your file" id="name-f9e6" name="filename" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+                  </div>
+                  <div class="u-align-left u-form-group u-form-submit">
+                    <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
+                    <input type="submit" value="submit" class="u-form-control-hidden">
+                  </div>
+                 
+
+                 
+                
+                </form> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<script>
+  $("#file").on("change",function(){
+    
+    var urlArr = this.value.split("\\");
+    if (this && this.files && this.files[0]) {
+      document.getElementById("fileName").innerHTML = urlArr[urlArr.length-1];
+      var fileUrl = URL.createObjectURL(this.files[0]);
+      // document.getElementById("fileImg").src = fileUrl;
+    }else{
+  
+      document.getElementById("fileName").innerHTML = urlArr[urlArr.length-1];
+      // document.getElementById("fileImg").style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+      // document.getElementById("fileImg").filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = this.value;
+    }
+  });
+</script>
+  
+
+{% endblock %}

@@ -2,19 +2,20 @@
 
 {% block main_body %}
 
-<!DOCTYPE html>
-<html lang="en">
 
-<body>
+<head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}" media="screen">
+</head>
+
     <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" id="sec-b88f" data-image-width="1920" data-image-height="1280">
         <h1 class="u-text u-text-default u-title u-text-1">InWhat</h1>
         <p class="u-align-left u-large-text u-text u-text-default u-text-variant u-text-2">"Fashion has two purposes: comfort and love"</p>
-        <a href="UPDATE_CLOTHES.html" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">UPDATE CLOTHES</a>
+        <a href="{% url 'upload_clothes_index' %}" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">UPLOAD CLOTHES</a>
         <a href="NEW_RECOMMENDATION.html" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-2">NEW RECOMMENDATION</a>
-        <a href="MY_COLLECTION.html" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-3">MY COLLECTION</a>
+        <a href="{% url 'gallery_index' %}" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-3">MY COLLECTION</a>
       </section>
       
-</body>
-</html>
+
 
 {% endblock %}
