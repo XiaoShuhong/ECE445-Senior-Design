@@ -31,7 +31,8 @@ def do_upload(request):
 
 
 def gallery_index(request):
-    return render(request,"gallery_body.html")
+    # return render(request,"gallery_body.html")
+    return render(request,"gallery.html")
 
     
     
