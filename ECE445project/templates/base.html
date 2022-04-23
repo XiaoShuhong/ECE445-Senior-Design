@@ -37,7 +37,7 @@
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-2-base u-text-hover-palette-1-base u-text-white" href="{% url 'index' %}" style="padding: 12px 10px;">Home</a></li>
               <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-2-base u-text-hover-palette-1-base u-text-white" href="{% url 'upload_clothes_index' %}" style="padding: 12px 10px;">Upload</a></li>
-              <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-palette-1-base" href="Collection.html" style="padding: 12px 10px;">Recommendation</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-2-base u-text-body-alt-color u-text-hover-palette-1-base" href="{% url 'recom_index' %}" style="padding: 12px 10px;">Recommendation</a></li>
               <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-2-base u-text-hover-palette-1-base u-text-white" href="{% url 'gallery_index' %}" style="padding: 12px 10px;">Collection</a></li>
             </ul>
           </div>
@@ -49,7 +49,7 @@
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
                   <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'index' %}">Home</a> </li>
                   <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'upload_clothes_index' %}">Upload</a></li>
-                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Recommendation.html">Recommendation</a></li>
+                  <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'recom_index' %}">Recommendation</a></li>
                   <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'gallery_index' %}">Collection</a></li>
                 </ul>
               </div>

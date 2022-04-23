@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block main_body %}
+   
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/gallery_global.css' %}" media="all">
+        <link rel="stylesheet" href="{% static 'css/layui.css' %}" media="all">
+        <style>
+            ul:not(.u-unstyled) {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            .layui-nav .layui-nav-item a {
+                display: block;
+                padding: 0 15px;
+                color: #fff;
+                color: rgba(255,255,255,.7);
+                transition: all .3s;
+                -webkit-transition: all .3s;
+            }
+            /* .tab{
+                border-bottom: 3px solid red;
+            } */
+        </style>
+
+    <body>
+
+        <ul class="layui-nav">
+            <li class="layui-nav-item " ><a href="" >Blazer</a></li>
+            <li class="layui-nav-item " ><a href="" >Blouse</a></li>
+            <li class="layui-nav-item" ><a href="">Coat</a></li>
+            <li class="layui-nav-item" ><a href="">Hoodie</a></li>
+            <li class="layui-nav-item" ><a href="">Jacket</a></li>
+            <li class="layui-nav-item" ><a href="">Parka</a></li>
+            <li class="layui-nav-item" ><a href="">Sweater</a></li>
+            <li class="layui-nav-item" ><a href="">Tank</a></li>
+            <li class="layui-nav-item" ><a href="">Tee</a></li>
+            <li class="layui-nav-item" ><a href="">Chinos</a></li>
+            <li class="layui-nav-item" ><a href="">Culottes</a></li>
+            <li class="layui-nav-item" ><a href="">Cutoffs</a></li>
+            <li class="layui-nav-item" ><a href="">Jeans</a></li>
+            <li class="layui-nav-item" ><a href="">Jeggings</a></li>
+            <li class="layui-nav-item" ><a href="">Joggers</a></li>
+            <li class="layui-nav-item" ><a href="">Shorts</a></li>
+            <li class="layui-nav-item" ><a href="">Skirt</a></li>
+            <li class="layui-nav-item" ><a href="">Dress</a></li>
+            <li class="layui-nav-item" ><a href="">Romper</a></li>
+        </ul>
+        
+
+        
+        {% block gallery_image %}{% endblock %}
+    
+    </body>
+
+
+
+
+
+{% endblock %}

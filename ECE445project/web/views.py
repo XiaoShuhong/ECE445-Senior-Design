@@ -1,3 +1,4 @@
+from re import L
 from django.shortcuts import render
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect
@@ -31,8 +32,12 @@ def do_upload(request):
 
 
 def gallery_index(request):
-    # return render(request,"gallery_body.html")
     return render(request,"gallery.html")
+
+
+def recom_index(request):
+    return render(request,"recommedation.html")
+    
 
     
     
