@@ -1,10 +1,164 @@
-{% extends "base.html" %}
+{% extends "recom_base.html" %}
 
-{% block main_body %}
+{% block recom_body %}
 
-<h1>
-    recommedation page
-</h1>
+<!DOCTYPE html>
+<html>
+	<head>
+        {% load static %}
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body,input,h1,h2,h3,h4,h5,h6,b,c,e,i,g,p,div,dl,dt,dd,select,textarea,font,right,left{ margin:0; padding:0;}
+			body,html{height:100%;position:relative;width: 100%;background-color: #FFFFFF;}
+			ul, ol, li, dl, dd {margin: 0;padding: 0; list-style:none;}
 
+			.protab{height:90px;width: 100%;box-sizing: border-box;display: flex;display: -webkit-flex;-webkit-justify-content: center;justify-content: center;background-color: #000000;}
+			.protab ul{width: 1200px;display: flex;display: -webkit-flex;-webkit-justify-content: space-between;justify-content: space-between;}
+			.protab ul li{width: 25%;position: relative;transition: all .3s;}
+			.protab ul li:hover{background-color: rgba(0,0,0,0.2);}
+			.protab ul li a{height: 50px;display: block;width: 100%;text-align: center;line-height: 70px;font-size: 15px;color: #FFFFFF;}
+			.protab ul li::after{content: '';display: block;width: 0%;height: 3px;position: absolute;bottom: 0;left: 0;background-color: #FFFFFF;transition: all .3s;}
+			.protab ul li.current::after{width: 100%;}
+			.fixedSubNav{position:fixed;top:0;left:0;z-index:95}
+			
+			.contents{width: auto;height: 950px;}
+			.contents .productcont{width: auto;height: 950px;}
+			.contents .productcont:nth-of-type(1){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/daily.jpg");background-size:cover}
+			.contents .productcont:nth-of-type(2){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/sports.jpg");background-size:cover}
+			.contents .productcont:nth-of-type(3){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/party.jpg");background-size:cover}
+			.contents .productcont:nth-of-type(4){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/evening.jpg");background-size:cover}
+            .contents .productcont:nth-of-type(5){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/formal.jpg");background-size:cover}
+            .contents .productcont:nth-of-type(6){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/vacation.jpg");background-size:cover}
+			
+            #shiny-shadow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 120vh;
+                }
+
+            button {
+                border: 2px solid white;
+                background: transparent;
+                text-transform: uppercase;
+                color: white;
+                padding: 15px 50px;
+                outline: none;
+                overflow: hidden;
+                position: relative;
+                }
+
+            span {
+                z-index: 20;  
+                }
+
+            button:after {
+                content: '';
+                    display: block;
+                    position: absolute;
+                    top: -36px;
+                    left: -100px;
+                    background: white;
+                    width: 50px;
+                    height: 125px;
+                    opacity: 20%;
+                    transform: rotate(-45deg);
+                }
+
+            button:hover:after {
+                left: 120%;
+                transition: all 600ms cubic-bezier(0.3, 1, 0.2, 1);
+                -webkit-transition: all 600ms cubic-bezier(0.3, 1, 0.2, 1);
+                }
+		</style>
+	</head>
+	<body>
+        {% load static %}
+
+		<div class="protab">
+			<ul>
+				<li class="current"><a href="#product01">DAY</a></li>
+				<li><a href="#product02">SPORTS</a></li>
+				<li><a href="#product03">PARTY</a></li>
+				<li><a href="#product04">EVENING</a></li>
+                <li><a href="#product05">FORMAL</a></li>
+                <li><a href="#product06">BEACH VACATION</a></li>
+			</ul>
+		</div>
+		
+		<div class="contents">
+			<div class="productcont" id="product01">
+                <div id="shiny-shadow">
+                    <a href="{% url 'index' %}"><button><span>Get My Outfit</span></button></a>
+                </div>
+            </div>
+			<div class="productcont" id="product02">
+                <div id="shiny-shadow">
+                    <button><span>Get My Outfit</span></button>
+                </div>
+            </div>
+			<div class="productcont" id="product03">
+                <div id="shiny-shadow">
+                    <button><span>Get My Outfit</span></button>
+                </div>
+            </div>
+			<div class="productcont" id="product04">
+                <div id="shiny-shadow">
+                    <button><span>Get My Outfit</span></button>
+                </div>
+            </div>
+            <div class="productcont" id="product05">
+                <div id="shiny-shadow">
+                    <button><span>Get My Outfit</span></button>
+                </div>
+            </div>
+            <div class="productcont" id="product06">
+                <div id="shiny-shadow">
+                    <button><span>Get My Outfit</span></button>
+                </div>
+            </div>
+		</div>
+		
+        <script src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+		<script>
+         
+		function scrollNav(){
+				var  sections = $(".productcont"); 
+				var  s_num = sections.length;
+				sections.each(function(index,el){
+					var _this = $(this);
+					if( _this.offset().top <  $(document).scrollTop()+5){
+						$(".protab ul li").removeClass("current").eq(index).addClass("current");
+					}
+				});
+				var targetTop = $(this).scrollTop();
+				if (targetTop >= 50) {
+					$(".protab").addClass("fixedSubNav");
+				} else {
+					$(".protab").removeClass("fixedSubNav");
+				}
+				
+			}
+	
+		$(".protab ul li").on("click",function(e){
+				var _this = $(this);
+				var a = _this.children("a");
+				var _href = a.attr("href");
+				e.preventDefault() ;
+				$("body,html").animate({
+					'scrollTop': $(_href).offset().top
+				});
+		});
+
+		$(window).on("scroll.nav",function(e){  
+				scrollNav();  
+		});
+		$(window).trigger("scroll.nav");
+	</script>
+		
+		
+	</body>
+</html>
 
 {% endblock %}
