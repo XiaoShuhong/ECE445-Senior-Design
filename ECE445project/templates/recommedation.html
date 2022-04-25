@@ -83,39 +83,39 @@
 				<li><a href="#product03">PARTY</a></li>
 				<li><a href="#product04">EVENING</a></li>
                 <li><a href="#product05">FORMAL</a></li>
-                <li><a href="#product06">BEACH VACATION</a></li>
+                <li><a href="#product06">VACATION</a></li>
 			</ul>
 		</div>
 		
 		<div class="contents">
 			<div class="productcont" id="product01">
                 <div id="shiny-shadow">
-                    <a href="{% url 'index' %}"><button><span>Get My Outfit</span></button></a>
+                    <a href="{% url 'generate_outfit' 'DAY' %}"><button><span>Get My Outfit</span></button></a>
                 </div>
             </div>
 			<div class="productcont" id="product02">
                 <div id="shiny-shadow">
-                    <button><span>Get My Outfit</span></button>
+                    <a href="{% url 'generate_outfit' 'SPORTS' %}"><button><span>Get My Outfit</span></button></a>
                 </div>
             </div>
 			<div class="productcont" id="product03">
                 <div id="shiny-shadow">
-                    <button><span>Get My Outfit</span></button>
+                    <a href="{% url 'generate_outfit' 'PARTY' %}"><button><span>Get My Outfit</span></button></a>
                 </div>
             </div>
 			<div class="productcont" id="product04">
                 <div id="shiny-shadow">
-                    <button><span>Get My Outfit</span></button>
+                    <a href="{% url 'generate_outfit' 'EVENING' %}"><button><span>Get My Outfit</span></button></a>
                 </div>
             </div>
             <div class="productcont" id="product05">
                 <div id="shiny-shadow">
-                    <button><span>Get My Outfit</span></button>
+                    <a href="{% url 'generate_outfit' 'FORMAL' %}"><button><span>Get My Outfit</span></button></a>
                 </div>
             </div>
             <div class="productcont" id="product06">
                 <div id="shiny-shadow">
-                    <button><span>Get My Outfit</span></button>
+                    <a href="{% url 'generate_outfit' 'VACATION' %}"><button><span>Get My Outfit</span></button></a>
                 </div>
             </div>
 		</div>

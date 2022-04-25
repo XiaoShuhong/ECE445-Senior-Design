@@ -26,33 +26,104 @@
     <body>
 
         <ul class="layui-nav">
-            <li class="layui-nav-item " ><a href="" >Blazer</a></li>
-            <li class="layui-nav-item " ><a href="" >Blouse</a></li>
-            <li class="layui-nav-item" ><a href="">Coat</a></li>
-            <li class="layui-nav-item" ><a href="">Hoodie</a></li>
-            <li class="layui-nav-item" ><a href="">Jacket</a></li>
-            <li class="layui-nav-item" ><a href="">Parka</a></li>
-            <li class="layui-nav-item" ><a href="">Sweater</a></li>
-            <li class="layui-nav-item" ><a href="">Tank</a></li>
-            <li class="layui-nav-item" ><a href="">Tee</a></li>
-            <li class="layui-nav-item" ><a href="">Chinos</a></li>
-            <li class="layui-nav-item" ><a href="">Culottes</a></li>
-            <li class="layui-nav-item" ><a href="">Cutoffs</a></li>
-            <li class="layui-nav-item" ><a href="">Jeans</a></li>
-            <li class="layui-nav-item" ><a href="">Jeggings</a></li>
-            <li class="layui-nav-item" ><a href="">Joggers</a></li>
-            <li class="layui-nav-item" ><a href="">Shorts</a></li>
-            <li class="layui-nav-item" ><a href="">Skirt</a></li>
-            <li class="layui-nav-item" ><a href="">Dress</a></li>
-            <li class="layui-nav-item" ><a href="">Romper</a></li>
+            <li class="layui-nav-item " ><a href="{% url 'gallery_detail' 'Blazer' 1 %}" >Blazer</a></li>
+            <li class="layui-nav-item " ><a href="{% url 'gallery_detail' 'Blouse' 1 %}" >Blouse</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Coat' 1 %}">Coat</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Hoodie' 1 %}">Hoodie</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Jacket' 1 %}">Jacket</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Parka' 1 %}">Parka</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Sweater' 1 %}">Sweater</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Tank' 1 %}">Tank</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Tee' 1 %}">Tee</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Chinos' 1 %}">Chinos</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Culottes' 1 %}">Culottes</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Cutoffs' 1 %}">Cutoffs</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Jeans' 1 %}">Jeans</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Jeggings' 1 %}">Jeggings</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Joggers' 1 %}">Joggers</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Shorts' 1 %}">Shorts</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Skirt' 1 %}">Skirt</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Dress' 1 %}">Dress</a></li>
+            <li class="layui-nav-item" ><a href="{% url 'gallery_detail' 'Romper' 1 %}">Romper</a></li>
         </ul>
         
 
         
         {% block gallery_image %}{% endblock %}
+
+        <div class="center">
+            <ul class="pagination">
+              <!-- <li><a href="{% url 'gallery_detail' catename pidx|add:-1 %}" onclick="page_up(this)">«</a></li> -->
+              <li><a href="{% url 'gallery_detail' catename pidx|add:-1 %}" >«</a></li>
+              {% if pidx == 1 %}
+              <li ><a  class="active" href="{% url 'gallery_detail' catename 1 %}" onclick="clicktab(this)" id = 1>1</a></li>    
+              <li><a href="{% url 'gallery_detail' catename 2 %}" onclick="clicktab(this)" id =2>2</a></li>
+              <li><a href="{% url 'gallery_detail' catename 3 %}" onclick="clicktab(this)" id =3>3</a></li>
+              <li><a href="{% url 'gallery_detail' catename 4 %}" onclick="clicktab(this)" id =4>4</a></li>
+              
+        
+              {% elif pidx == 2 %}
+              <li ><a href="{% url 'gallery_detail' catename 1 %}" onclick="clicktab(this)" id = 1>1</a></li>    
+              <li><a  class="active" href="{% url 'gallery_detail' catename 2 %}" onclick="clicktab(this)" id =2>2</a></li>
+              <li><a href="{% url 'gallery_detail' catename 3 %}" onclick="clicktab(this)" id =3>3</a></li>
+              <li><a href="{% url 'gallery_detail' catename 4 %}" onclick="clicktab(this)" id =4>4</a></li>
+              
+              
+              {% elif pidx == 3 %}
+              <li ><a href="{% url 'gallery_detail' catename 1 %}" onclick="clicktab(this)" id = 1>1</a></li>    
+              <li><a  href="{% url 'gallery_detail' catename 2 %}" onclick="clicktab(this)" id =2>2</a></li>
+              <li><a class="active" href="{% url 'gallery_detail' catename 3 %}" onclick="clicktab(this)" id =3>3</a></li>
+              <li><a href="{% url 'gallery_detail' catename 4 %}" onclick="clicktab(this)" id =4>4</a></li>
+              
+
+              {% elif pidx == 4 %}
+              <li ><a href="{% url 'gallery_detail' catename 1 %}" onclick="clicktab(this)" id = 1>1</a></li>    
+              <li><a  href="{% url 'gallery_detail' catename 2 %}" onclick="clicktab(this)" id =2>2</a></li>
+              <li><a href="{% url 'gallery_detail' catename 3 %}" onclick="clicktab(this)" id =3>3</a></li>
+              <li><a class="active"  href="{% url 'gallery_detail' catename 4 %}" onclick="clicktab(this)" id =4>4</a></li>
+              
+              <!-- <li><a href="{% url 'gallery_detail' catename pidx|add:1 %}">»</a></li> -->
+              {% endif %}
+              <li><a href="{% url 'gallery_detail' catename pidx|add:1 %}" >»</a></li>
+            </ul>
+          </div>
+    </div>
     
     </body>
-
+    <script>
+        function clicktab(that){
+            console.log(that);
+            var act = document.getElementsByClassName("active");
+            for(var i=0;i<act.length;i++){
+                act[i].classList.remove("active")
+            }
+            that.classList.add("active")
+        }
+        function page_up(that){
+            console.log(that);
+            var act = document.getElementsByClassName("active");
+            
+            var id = new Number(act[0].id);
+            var tar_id = id-1;
+            var tar_obj = document.getElementById(tar_id);
+            console.log(tar_obj);
+            act[0].classList.remove("active")
+            tar_obj.classList.add("active")
+    
+    
+        }
+        function page_down(that){
+            console.log(that);
+            var act = document.getElementsByClassName("active");
+            var id = new Number(act[0].id);
+            var tar_id = id+1;
+            var tar_obj = document.getElementById(tar_id);
+            console.log(tar_obj);
+            act[0].classList.remove("active")
+            tar_obj.classList.add("active")
+    
+        }
+    </script>
 
 
 
