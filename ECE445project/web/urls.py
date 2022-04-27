@@ -11,5 +11,6 @@ urlpatterns = [
     path('gallery/index/detail/<str:catename><int:pidx>',views.change_cate,name='gallery_detail'),
     path('recom/index',views.recom_index,name='recom_index'),
     path('recom/outfit_display<str:style>',views.generate_outfit,name='generate_outfit'),
+    path('recom/call_hanger<str:candidate>',views.call_hanger,name='call_hanger'),
     
 ]

@@ -5,7 +5,7 @@
     {% load static %}
     <meta http-equiv="content-type" content="text.html;charset=utf-8">
     <!-- <meta name="viewport" content="width=device-width,initial-scale=1,maxium-scale=1,user-scalable=no"> -->
-    <link rel="stylesheet" href="{% static 'css/outfit.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/outfit.css' %}" media="screen">  
     <script class="u-script" type="text/javascript" src="{% static 'js/vanilla.js' %}" defer=""></script>
 </head>
 <style>
@@ -19,102 +19,108 @@
     {% load static %}
     <div class="box_con">
         <div class="container">
+            <h1>01</h1>
             <div class="card" style="background: url('/static/images/upper.jpg'); background-size:280px 300px;">
                 <!-- <img src="/static/user_upload/qye.jpg" alt=""> -->
                 <div class="content">
                     
-                    <h2>01</h2>
+                    <!-- <h2>01</h2> -->
                     <h3>Upper Clothes</h3>
                     <!-- <p>qwwfgdhserfwegrg</p> -->
-                    <a href="#">Get it</a>
+                    <a href="{% url 'call_hanger' '1a' %}">Get it</a>
                 </div>
             </div>
-
+            
             <div class="card" style="background: url('/static/images/bottom.jpg'); background-size:280px 300px;">
                 <div class="content">
-                    <h2>02</h2>
+                    <!-- <h2>02</h2> -->
                     <h3>Bottom Clothes</h3>
             
-                    <a href="#">Get it</a>
+                    <a href="{% url 'call_hanger' '1b' %}">Get it</a>
                 </div>
             </div>
 
             <div class="card" style="background: url('/static/images/outside.jpg'); background-size:280px 300px;">
                 <div class="content">
-                    <h2>03</h2>
+                    <!-- <h2>03</h2> -->
                     <h3>Outside Clothes</h3>
-                    <a href="#">Get it</a>
+                    <a href="{% url 'call_hanger' '1c' %}">Get it</a>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="card" style="background: url('/static/images/upper.jpg'); background-size:280px 300px;">
+            <h1>02</h1>
+            <div class="card" style="background: url('/static/images/upper2.jpg'); background-size:280px 300px;">
                 <!-- <img src="/static/user_upload/qye.jpg" alt=""> -->
                 <div class="content">
                     
-                    <h2>01</h2>
+                    <!-- <h2>01</h2> -->
                     <h3>Upper Clothes</h3>
                     <!-- <p>qwwfgdhserfwegrg</p> -->
-                    <a href="#">Get it</a>
+                    <a href="{% url 'call_hanger' '2a' %}">Get it</a>
                 </div>
             </div>
 
-            <div class="card" style="background: url('/static/images/bottom.jpg'); background-size:280px 300px;">
+            <div class="card" style="background: url('/static/images/bottom2.jpg'); background-size:280px 300px;">
                 <div class="content">
-                    <h2>02</h2>
+                    <!-- <h2>02</h2> -->
                     <h3>Bottom Clothes</h3>
             
-                    <a href="#">Get it</a>
+                    <a href="{% url 'call_hanger' '2b' %}">Get it</a>
                 </div>
             </div>
 
-            <div class="card" style="background: url('/static/images/outside.jpg'); background-size:280px 300px;">
+            <div class="card" style="background: url('/static/images/empty.png'); background-size:280px 300px;">
                 <div class="content">
-                    <h2>03</h2>
+                    <!-- <h2>03</h2> -->
                     <h3>Outside Clothes</h3>
-                    <a href="#">Get it</a>
+                    <a href="{% url 'call_hanger' '2c' %}">Get it</a>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="card" style="background: url('/static/images/upper.jpg'); background-size:280px 300px;">
+            <h1>03</h1>
+            <div class="card" style="background: url('/static/images/upper3.jpg'); background-size:280px 300px;">
                 <!-- <img src="/static/user_upload/qye.jpg" alt=""> -->
                 <div class="content">
                     
-                    <h2>01</h2>
+                    <!-- <h2>01</h2> -->
                     <h3>Upper Clothes</h3>
                     <!-- <p>qwwfgdhserfwegrg</p> -->
-                    <a href="#">Get it</a>
+                    <a href="{% url 'call_hanger' '3a' %}">Get it</a>
                 </div>
             </div>
 
-            <div class="card" style="background: url('/static/images/bottom.jpg'); background-size:280px 300px;">
+            <div class="card" style="background: url('/static/images/bottom3.jpg'); background-size:280px 300px;">
                 <div class="content">
-                    <h2>02</h2>
+                    <!-- <h2>02</h2> -->
                     <h3>Bottom Clothes</h3>
             
-                    <a href="#">Get it</a>
+                    <a href="{% url 'call_hanger' '3b' %}">Get it</a>
                 </div>
             </div>
 
-            <div class="card" style="background: url('/static/images/outside.jpg'); background-size:280px 300px;">
+            <div class="card" style="background: url('/static/images/outside3.jpg'); background-size:280px 300px;">
                 <div class="content">
-                    <h2>03</h2>
+                    <!-- <h2>03</h2> -->
                     <h3>Outside Clothes</h3>
-                    <a href="#">Get it</a>
+                    <a href="{% url 'call_hanger' '3c' %}">Get it</a>
                 </div>
             </div>
+        </div>
+        <div id="shiny-shadow">
+            <a href="{% url 'generate_outfit' style %}"><button><span>Generate New Outfit</span></button></a>
         </div>
     </div>
     
-    <!-- <script>
+    <script>
         VanillaTilt.init(document.querySelectorAll(".card"),{
             max:15,
             speed:400,
             glare:true,
             "max-glare":1
         })
-    </script> -->
+    </script>
 </body>
 
 

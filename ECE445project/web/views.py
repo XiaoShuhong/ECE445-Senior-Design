@@ -33,7 +33,7 @@ def do_upload(request):
     return render(request,"upload_success.html",context)
 def comfirm_category(request,category):
     print(category)
-    return HttpResponse("store upload "+category)
+    return HttpResponse("store upload "+category+'\n'+ 'hanger 3c is binded.')
 ###############################################
 #gallery
 
@@ -63,7 +63,8 @@ def generate_outfit(request,style):
     context={"style":style}
     return render(request,"outfit_display.html",context)
     
-
+def call_hanger(request,candidate):
+    return HttpResponse('hanger '+candidate +" is called")
     
     
 # def upload_success(request):
