@@ -7,9 +7,9 @@
   <style id="content">
      #content
         {
-            margin: 50px auto;
-            width: 400px;
-            height: 340px;
+            margin: 50px;
+            width: 300px;
+            height: 300px;
         }
       #content img
         {
@@ -23,7 +23,7 @@
     img {
         border-style: none;
         height: 300px;
-        margin-left: 120px;
+        margin-left: 0px;
       }
   </style>
   <style>
@@ -106,9 +106,9 @@
                  <img src="{{file_scr}}" alt="">
                 </div>
                 <div id="frozen-btn">
-                  <a href="{% url 'comfirm_category' 'candidate1' %}"><button class="green">candidate1</button></a>
-                  <a href= "{% url 'comfirm_category' 'candidate2' %}"><button class="purple">candidate2</button></a>
-                  <a href="{% url 'comfirm_category' 'candidate3' %}"><button class="green">candidate3</button></a>
+                  <a href="{% url 'comfirm_category' candidate1 filename %}"><button class="green">{{candidate1}}</button></a>
+                  <a href= "{% url 'comfirm_category' candidate2 filename %}"><button class="purple">{{candidate2}}</button></a>
+                  <a href="{% url 'comfirm_category' candidate3 filename %}"><button class="green">{{candidate3}}</button></a>
                 </div>
               </div>
             </div>

@@ -20,96 +20,97 @@
     <div class="box_con">
         <div class="container">
             <h1>01</h1>
-            <div class="card" style="background: url('/static/images/upper.jpg'); background-size:280px 300px;">
-                <!-- <img src="/static/user_upload/qye.jpg" alt=""> -->
+            <div class="card" style="background: url('{{outfit1a}}'); background-size:280px 300px;">
+                <!-- <img src= '/static/user_upload/Abstract_Print_Combo_Maxi_Dress-img_00000017.jpg' alt=""> -->
                 <div class="content">
                     
                     <!-- <h2>01</h2> -->
                     <h3>Upper Clothes</h3>
                     <!-- <p>qwwfgdhserfwegrg</p> -->
-                    <a href="{% url 'call_hanger' '1a' %}">Get it</a>
+                    <a href="{% url 'call_hanger' img1 %}">Get it</a>
                 </div>
             </div>
             
-            <div class="card" style="background: url('/static/images/bottom.jpg'); background-size:280px 300px;">
+            <div class="card" style="background: url('{{outfit1b}}'); background-size:280px 300px;">
                 <div class="content">
                     <!-- <h2>02</h2> -->
                     <h3>Bottom Clothes</h3>
             
-                    <a href="{% url 'call_hanger' '1b' %}">Get it</a>
+                    <a href="{% url 'call_hanger' img1 %}">Get it</a>
                 </div>
             </div>
 
-            <div class="card" style="background: url('/static/images/outside.jpg'); background-size:280px 300px;">
+            <div class="card" style="background: url('{{outfit1c}}'); background-size:280px 300px;">
                 <div class="content">
                     <!-- <h2>03</h2> -->
                     <h3>Outside Clothes</h3>
-                    <a href="{% url 'call_hanger' '1c' %}">Get it</a>
+                    <a href="{% url 'call_hanger' img1 %}">Get it</a>
                 </div>
             </div>
         </div>
+
         <div class="container">
             <h1>02</h1>
-            <div class="card" style="background: url('/static/images/upper2.jpg'); background-size:280px 300px;">
+            <div class="card" style="background: url('{{outfit2a}}'); background-size:280px 300px;">
                 <!-- <img src="/static/user_upload/qye.jpg" alt=""> -->
                 <div class="content">
                     
                     <!-- <h2>01</h2> -->
                     <h3>Upper Clothes</h3>
                     <!-- <p>qwwfgdhserfwegrg</p> -->
-                    <a href="{% url 'call_hanger' '2a' %}">Get it</a>
+                    <a href="{% url 'call_hanger' img2 %}">Get it</a>
                 </div>
             </div>
 
-            <div class="card" style="background: url('/static/images/bottom2.jpg'); background-size:280px 300px;">
+            <div class="card" style="background: url('{{outfit2b}}'); background-size:280px 300px;">
                 <div class="content">
                     <!-- <h2>02</h2> -->
                     <h3>Bottom Clothes</h3>
             
-                    <a href="{% url 'call_hanger' '2b' %}">Get it</a>
+                    <a href="{% url 'call_hanger' img2 %}">Get it</a>
                 </div>
             </div>
 
-            <div class="card" style="background: url('/static/images/empty.png'); background-size:280px 300px;">
+            <div class="card" style="background: url('{{outfit2c}}'); background-size:280px 300px;">
                 <div class="content">
                     <!-- <h2>03</h2> -->
                     <h3>Outside Clothes</h3>
-                    <a href="{% url 'call_hanger' '2c' %}">Get it</a>
+                    <a href="{% url 'call_hanger' img2 %}">Get it</a>
                 </div>
             </div>
         </div>
         <div class="container">
             <h1>03</h1>
-            <div class="card" style="background: url('/static/images/upper3.jpg'); background-size:280px 300px;">
+            <div class="card" style="background: url('{{outfit3a}}'); background-size:280px 300px;">
                 <!-- <img src="/static/user_upload/qye.jpg" alt=""> -->
                 <div class="content">
                     
                     <!-- <h2>01</h2> -->
                     <h3>Upper Clothes</h3>
                     <!-- <p>qwwfgdhserfwegrg</p> -->
-                    <a href="{% url 'call_hanger' '3a' %}">Get it</a>
+                    <a href="{% url 'call_hanger' img3 %}">Get it</a>
                 </div>
             </div>
 
-            <div class="card" style="background: url('/static/images/bottom3.jpg'); background-size:280px 300px;">
+            <div class="card" style="background: url('{{outfit3b}}'); background-size:280px 300px;">
                 <div class="content">
                     <!-- <h2>02</h2> -->
                     <h3>Bottom Clothes</h3>
             
-                    <a href="{% url 'call_hanger' '3b' %}">Get it</a>
+                    <a href="{% url 'call_hanger' img3 %}">Get it</a>
                 </div>
             </div>
 
-            <div class="card" style="background: url('/static/images/outside3.jpg'); background-size:280px 300px;">
+            <div class="card" style="background: url('{{outfit3c}}'); background-size:280px 300px;">
                 <div class="content">
                     <!-- <h2>03</h2> -->
                     <h3>Outside Clothes</h3>
-                    <a href="{% url 'call_hanger' '3c' %}">Get it</a>
+                    <a href="{% url 'call_hanger' img3 %}">Get it</a>
                 </div>
             </div>
         </div>
         <div id="shiny-shadow">
-            <a href="{% url 'generate_outfit' style %}"><button><span>Generate New Outfit</span></button></a>
+            <a href="{% url 'generate_outfit' style weather %}"><button><span>Generate New Outfit</span></button></a>
         </div>
     </div>
     

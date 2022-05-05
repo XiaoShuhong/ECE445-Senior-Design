@@ -78,17 +78,13 @@
     </style>
 </head>
 <body>
+    {% load static %}
     <div class="box_con">
         <div class="pic_list_con">
             <ul class="clearfix">
-                <li><a href=""><img src="/static/images/template_clothes.jpg" alt="商品图片"></a></li>
-                <li><a href=""><img src="/static/images/template_clothes.jpg" alt="商品图片"></a></li>
-                <li><a href=""><img src="/static/images/template_clothes.jpg" alt="商品图片"></a></li>
-                <li><a href=""><img src="/static/images/template_clothes.jpg" alt="商品图片"></a></li>
-                <li><a href=""><img src="/static/images/template_clothes.jpg" alt="商品图片"></a></li>
-                <li><a href=""><img src="/static/images/template_clothes.jpg" alt="商品图片"></a></li>
-                <li><a href=""><img src="/static/images/template_clothes.jpg" alt="商品图片"></a></li>
-                <li><a href=""><img src="/static/images/template_clothes.jpg" alt="商品图片"></a></li>
+                {% for vo in imglist %}
+                    <li><a href=""><img src="{{vo.img_content}}" alt=""></a></li>
+                {% endfor %}
             </ul>
             
         </div>
