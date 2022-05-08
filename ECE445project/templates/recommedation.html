@@ -8,6 +8,7 @@
         {% load static %}
 		<meta charset="utf-8">
 		<title></title>
+		
 		<style type="text/css">
 			body,input,h1,h2,h3,h4,h5,h6,b,c,e,i,g,p,div,dl,dt,dd,select,textarea,font,right,left{ margin:0; padding:0;}
 			body,html{height:100%;position:relative;width: 100%;background-color: #FFFFFF;}
@@ -24,18 +25,19 @@
 			
 			.contents{width: auto;height: 950px;}
 			.contents .productcont{width: auto;height: 950px;}
-			.contents .productcont:nth-of-type(1){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/daily.jpg");background-size:cover}
+			/* .contents .productcont:nth-of-type(1){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/daily.jpg");background-size:cover}
 			.contents .productcont:nth-of-type(2){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/sports.jpg");background-size:cover}
 			.contents .productcont:nth-of-type(3){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/party.jpg");background-size:cover}
 			.contents .productcont:nth-of-type(4){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/evening.jpg");background-size:cover}
             .contents .productcont:nth-of-type(5){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/formal.jpg");background-size:cover}
-            .contents .productcont:nth-of-type(6){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/vacation.jpg");background-size:cover}
-			
+            .contents .productcont:nth-of-type(6){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/vacation.jpg");background-size:cover} */
+			/* .contents .productcont:nth-of-type(7){background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/static/images/personal.jpg");background-size:cover} */
+
             #shiny-shadow {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 120vh;
+                /* height: 120vh; */
                 }
 
             button {
@@ -71,24 +73,152 @@
                 transition: all 600ms cubic-bezier(0.3, 1, 0.2, 1);
                 -webkit-transition: all 600ms cubic-bezier(0.3, 1, 0.2, 1);
                 }
+
+			.u-input {
+					background-color: white;
+				}
+			ul { list-style-type: none;}
+			li { display: inline-block;}
+		
+			input.labelauty + label { font: 12px "Microsoft Yahei";}
+
+			mybutton {  
+				width: 80px;  
+				height:40px;
+				padding:8px;  
+				background-color: #428bca;  
+				border-color: #357ebd;  
+				color: #fff;  
+				-moz-border-radius: 10px;  
+				-webkit-border-radius: 10px;  
+				border-radius: 10px; /* future proofing */  
+				-khtml-border-radius: 10px; /* for old Konqueror browsers */  
+				text-align: center;  
+				vertical-align: middle;  
+				border: 1px solid transparent;  
+				font-weight: 900;  
+				font-size:125%  
+      		}  
+			myform{
+				margin-top: 300px;
+			}
+
+			mybutton{
+				display: block;
+				
+			}
+
+			mybutton:hover {
+			cursor: pointer;
+			}
+			#cold_b{
+				float:left;
+				z-index: 0;
+				
+			}
+			#mild_b{
+				float:left;
+				z-index: 0;
+			}
+			#hot_b{
+				float:right;
+				z-index: 0;
+			}
+
+			.button-3d-1 {
+			position: relative;
+			/* background: orangered; */
+			background: rgba(0,0,0,0.5);
+			border: none;
+			color: white;
+			padding: 10px 2px;
+			font-size: 0.1rem;
+			/* hsl(hue, saturation, lightness) */
+			box-shadow: -6px 6px 0 hsl(20deg 3% 27%);
+			outline: none;
+			}
+
+			.button-3d-1:hover {
+			/* background: hsl(16, 100%, 45%); */
+			background: hsla(0, 0%, 100%, 0);
+			}
+
+			.button-3d-1:active {
+			/* background: hsl(16, 100%, 40%); */
+			background: hsla(0, 0%, 100%, 0);
+			top: 3px;
+			left: -3px;
+			box-shadow: -3px 3px 0 hsl(20deg 3% 27%);
+			}
+
+			.button-3d-1::before {
+			position: absolute;
+			display: block;
+			content: "";
+			height: 0;
+			width: 0;
+
+			/* border: 6px solid transparent; */
+			border-right: 6px solid hsl(20deg 3% 27%);
+			border-left-width: 0px;
+			top: 0;
+			left: -6px;
+			}
+
+			.button-3d-1::after {
+			position: absolute;
+			display: block;
+			content: "";
+			height: 0;
+			width: 0;
+
+			/* border: 6px solid transparent; */
+			border-top: 6px solid hsl(20deg 3% 27%);
+			border-bottom-width: 0px;
+			bottom: -6px;
+			right: 0;
+			}
+
+			.button-3d-1:active::before {
+			/* border: 3px solid transparent; */
+			border-right: 3px solid hsl(20deg 3% 27%);
+			border-left-width: 0px;
+			left: -3px;
+			}
+
+			.button-3d-1:active::after {
+			/* border: 3px solid transparent; */
+			border-top: 3px solid hsl(20deg 3% 27%);
+			border-bottom-width: 0px;
+			bottom: -3px;
+			}
 		</style>
+		<link rel="stylesheet" href="{% static 'css/jquery-labelauty.css' %}" media="all">
 	</head>
 	<body>
         {% load static %}
 
 		<div class="protab">
 			<ul>
-				<li class="current"><a href="#product01">DAY</a></li>
+				<!-- <li class="current"><a href="#product01">DAY</a></li>
 				<li><a href="#product02">SPORTS</a></li>
 				<li><a href="#product03">PARTY</a></li>
 				<li><a href="#product04">EVENING</a></li>
                 <li><a href="#product05">FORMAL</a></li>
-                <li><a href="#product06">VACATION</a></li>
+                <li><a href="#product06">VACATION</a></li> -->
+				{% for vo in user_style %}
+					{% if vo.Style_Name == LADY %}
+					<li class="current"><a href="#{{vo.id}}">{{vo.Style_Name}}</a></li>
+					{% else %}
+					<li><a href="#{{vo.id}}">{{vo.Style_Name}}</a></li>
+					{% endif %}
+				{% endfor %}
+				<li><a href="#product99">DEFINE NEW</a></li>
 			</ul>
 		</div>
 		
 		<div class="contents">
-			<div class="productcont" id="product01">
+			<!-- <div class="productcont" id="product01">
                 <div id="shiny-shadow">
                     <a href="{% url 'generate_outfit' 'DAY ' weather %}"><button><span>Get My Outfit</span></button></a>
                 </div>
@@ -117,10 +247,112 @@
                 <div id="shiny-shadow">
                     <a href="{% url 'generate_outfit' 'VACATION ' weather %}"><button><span>Get My Outfit</span></button></a>
                 </div>
+            </div> -->
+			
+			{% for vo in user_style %}
+			<div class="productcont" id="{{vo.id}}" style="background: url('{{vo.backimg}}'); background-size: cover;">
+                <div id="shiny-shadow">
+					<myform>
+						{% if vo.cold_ava == 'true' %}
+							
+							<a  href="{% url 'write_style' vo.Style_Name 'cold' %}" ><mybutton style="visibility:hidden" id="cold_b" class="button-3d-1">Write Style</mybutton></a>
+						{% else %}
+							<a href="{% url 'write_style' vo.Style_Name 'cold' %}"  ><mybutton  id="cold_b" class="button-3d-1">Write Style</mybutton></a>
+						{% endif %}
+						{% if vo.mild_ava == 'true' %}
+							<a  href="{% url 'write_style' vo.Style_Name 'mild' %}"  ><mybutton   id="mild_b" style="visibility:hidden"  class="button-3d-1">Write Style</mybutton></a>
+						{% else %}
+							<a href="{% url 'write_style' vo.Style_Name 'mild' %}"  ><mybutton id="mild_b" class="button-3d-1">Write Style</mybutton></a>
+						{% endif %}
+						{% if vo.hot_ava == 'true' %}
+							<a  href="{% url 'write_style' vo.Style_Name 'hot' %}"  ><mybutton  id="hot_b" style="visibility:hidden" class="button-3d-1">Write Style</mybutton></a>
+						{% else %}
+							<a href="{% url 'write_style' vo.Style_Name 'hot' %}"  ><mybutton id="hot_b" class="button-3d-1">Write Style</mybutton></a>
+						{% endif %}
+						<form class="form-horizontal" action="{% url 'generate_outfit' vo.Style_Name weather %}" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						
+						<ul class="dowebok">
+							<!-- <li><input type="checkbox" name="checkbox" disabled checked data-labelauty="HTML"></li> -->
+							{% if vo.cold_ava == 'true' %}
+								{% if weather == 'cold' %}
+									<li><input type="checkbox" name="Cold" checked data-labelauty="COLD"></li>
+								{% else %}
+									<li><input type="checkbox" name="Cold" data-labelauty="COLD"></li>
+								{% endif %}
+							{% else %}
+								<li><input type="checkbox" name="Cold" disabled data-labelauty="COLD"></li>
+								<!-- <a href="{% url 'index' %}"><button><span>Write Style</span></button></a> -->
+							{% endif %}
+
+							{% if vo.mild_ava == 'true' %}
+								{% if weather == 'mild' %}
+									<li><input type="checkbox" name="Mild" checked data-labelauty="MILD"></li>
+								{% else %}
+									<li><input type="checkbox" name="Mild" data-labelauty="MILD"></li>
+								{% endif %}
+							{% else %}
+							<li><input type="checkbox" name="Mild" disabled data-labelauty="MILD"></li>
+							{% endif %}
+
+							{% if vo.hot_ava == 'true' %}
+								{% if weather == 'hot' %}
+									<li><input type="checkbox" name="Hot" checked data-labelauty="HOT"></li>
+								{% else %}
+									<li><input type="checkbox" name="Hot" data-labelauty="HOT"></li>
+								{% endif %}
+							{% else %}
+							<li><input type="checkbox" name="Hot" disabled data-labelauty="HOT"></li>
+							{% endif %}
+								<!-- <li><input type="radio" name="radio" data-labelauty="COLD"></li>
+								<li><input type="radio" name="radio" data-labelauty="MIDL"></li>
+								<li><input type="radio" name="radio" data-labelauty="HOT"></li> -->
+					
+						
+						</ul>
+						<div class="u-align-left u-form-group u-form-submit">
+                    	<a href=""><button><span>Get My Outfit</span></button></a>
+						<input type="submit" value="submit" class="u-form-control-hidden">
+						</div>
+						</form>
+					</myform>
+                </div>
+            </div>
+			{% endfor %}
+			<div class="productcont" id="product99" style="background: url('/static/images/personal.jpg'); background-size: cover;">
+                <div id="shiny-shadow" style="height:120vh">
+					<form class="form-horizontal" action="{% url 'add_new_style' %}" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						<div class="box-body">
+						  <div class="form-group">
+							<div class="col-sm-4">
+							  <input type="text" name="Style_Name" class="form-control u-input u-input-rectangle u-border-1 u-border-grey-30" id="inputEmail3" placeholder="Style Name">
+							</div>
+						  </div>
+						  
+						</div>
+						<div class="u-align-left u-form-group u-form-submit">
+							<a href=""><button><span>Add New Style</span></button></a>
+						  <input type="submit" value="submit" class="u-form-control-hidden">
+						</div>
+					  </div>
+					  
+						<!-- /.box-footer -->
+					</form>
+                    
+                </div>
             </div>
 		</div>
 		
         <script src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+		<script class="u-script" type="text/javascript" src="{% static 'js/jquery-1.8.3.min.js' %}" defer=""></script>
+		<script class="u-script" type="text/javascript" src="{% static 'js/jquery-labelauty.js' %}" defer=""></script>
+		<script>
+			$(function(){
+				$(':input').labelauty();
+			});
+		</script>
+		
 		<script>
          
 		function scrollNav(){
